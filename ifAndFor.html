@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>nothing</title>
+</head>
+<body>
+	<script src="https://unpkg.com/vue/dist/vue.js"></script>
+	<div id="mytest">
+		<h3>水果列表</h3>
+		<div v-if="nicai">你猜是否显示</div>
+		<ol>
+			<li v-for="game in game">{{game.title}} / {{game.price}}元</li>
+			<!-- <li v-for="game in games">{{game.title}} / {{game.price}}</li> -->
+			<li v-for="fruit in fruits">{{fruit.title}}/{{fruit.price}}</li>
+		</ol>
+		
+	</div>
+	<script>
+		var mytest = new Vue({
+			el:'#mytest',
+			data:{
+				nicai:true,
+				fruits: [
+				    {title:'西瓜',price:400},
+				],
+
+				game: [
+                    {title:'勇者斗恶龙',price:400},
+                    {title:'超级马里奥',price:380},
+                    {title:'我的世界',price:99},
+                ],
+			},
+
+	    });
+		
+	</script>
+
+</body>
+</html>
